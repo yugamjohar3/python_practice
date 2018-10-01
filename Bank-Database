@@ -1,0 +1,50 @@
+def deposit(amount):
+    am=int(input('enter balance'))
+    return amount+am
+
+def withdraw(amount):
+    x=int(input("enter the amount to withdraw"))
+    if(x==0):
+        print("withdrawl invalid")
+        withdraw(amount)
+    else:
+        if(x>amount):
+            print("insufficient balance")
+            withdraw(amount)
+        else:
+            amount=amount-x
+    print("def of with",amount)
+    return amount
+
+
+choice=1
+amount=0
+while choice!=4:
+    print('Press 1 to deposit in bank')
+    print('Press 3 to check balance')
+    print('Press 2 withdraw')
+    print('Press 4 for exit')
+
+    choice=int(input('enter choice'))
+    if(choice==1):
+        amount=deposit(amount) 
+    elif (choice==2):
+        amount=withdraw(amount)
+        print('withdraw',amount)
+    elif (choice==3):
+        print(amount)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
